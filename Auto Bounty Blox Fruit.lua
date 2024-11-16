@@ -1,39 +1,98 @@
-getgenv().Setting = {
+
+getgenv().config = {
     ["Team"] = "Pirates",
-    ["Chat"] = {},
-    ["Skip Race V4"] = true,
-    ["Misc"] = {
-        ["Enable Lock Bounty"] = false,
-        ["Lock Bounty"] = {0, 300000000},
-        ["Hide Health"] = {4500,5000},
-        ["Lock Camera"] = true,
-        ["Enable Cam Farm"] = false,
-        ["White Screen"] = false,
-        ["FPS Boost"] = true,
-        ["Bypass TP"] = true,
-        ["Random & Store Fruit"] = true
+    ["Use Race"] = {
+        ["V3"] = true,
+        ["V4"] = true
     },
-    ["Item"] = {
-        ["Melee"] = {["Enable"] = true,
-            ["Z"] = {["Enable"] = true, ["Hold Time"] = 1},
-            ["X"] = {["Enable"] = true, ["Hold Time"] = 0},
-            ["C"] = {["Enable"] = true, ["Hold Time"] = 0}
+    ["Info Screen"] = true,
+    ["White Screen"] = false,
+    ["BypassTp"] = true,
+    ["SkipFruit"] = {
+        "Portal-Portal"
+    },
+    ["Skip Race V4 User"] = true,
+    ["MainSkillToggle"] = {
+        ["Melee"] = {
+            ["Enable"] = true,
+            ["Delay"] = 1.75,
+            ["Skills"] = {
+                ["Z"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 1.5,
+                },
+                [ "X"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+
+                ["C"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+            },
         },
-        ["Blox Fruit"] = {["Enable"] = true,
-            ["Z"] = {["Enable"] = true, ["Hold Time"] = 1.5},
-            ["X"] = {["Enable"] = true, ["Hold Time"] = 0},
-            ["C"] = {["Enable"] = true, ["Hold Time"] = 0},
-            ["V"] = {["Enable"] = true, ["Hold Time"] = 0},
-            ["F"] = {["Enable"] = true, ["Hold Time"] = 0}
+        ["Blox Fruit"] = {
+            ["Enable"] = false,
+            ["Delay"] = 2,
+            ["Skills"] = {
+                ["Z"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+                ["X"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 2,
+                },
+                ["C"] = {
+                    ["Enable"] = false,
+                    ["HoldTime"] = 0,
+                },
+                ["V"] = {
+                    ["Enable"] = false,
+                    ["HoldTime"] = 0,
+                },
+                ["F"] = {
+                    ["Enable"] = false,
+                    ["HoldTime"] = 0,
+                },
+            },
         },
-        ["Sword"] = {["Enable"] = true,
-            ["Z"] = {["Enable"] = true, ["Hold Time"] = 0.3},
-            ["X"] = {["Enable"] = true, ["Hold Time"] = 0.2}
+        ["Gun"] = {
+            ["Enable"] = true,
+            ["Delay"] = 1,
+            ["Skills"] = {
+                ["Z"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+                ["X"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+            },
         },
-        ["Gun"] = {["Enable"] = true,
-            ["Z"] = {["Enable"] = true, ["Hold Time"] = 0.5},
-            ["X"] = {["Enable"] = true, ["Hold Time"] = 0.3}
+        ["Sword"] = {
+            ["Enable"] = true,
+            ["Delay"] = 1,
+            ["Skills"] = {
+                ["Z"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+                ["X"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+            },
         }
-    }
+    },
+    ["Webhooks"] = {
+        ["Link Webhook"] = "",
+        ["Toggle Webhook"] = true
+    },
+    ["MinBountyHunt"] = 0,
+    ["MaxBountyHunt"] = 30000000,
+    ["SafeHealth"] = 4000
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Ghost-1198/AutoBounty/main/AutoBounty.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LumosSera/SeraHub/main/AutoBounty.lua"))()
