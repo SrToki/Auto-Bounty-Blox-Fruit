@@ -1,5 +1,5 @@
 getgenv().config = {
-    ["Team"] = "Marine",
+    ["Team"] = "Marines",
     ["Use Race"] = {
         ["V3"] = true,
         ["V4"] = true
